@@ -2,20 +2,21 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hcs.incomex.populate;
+package com.hcs.incomex.povoadores;
 
 import br.unesp.igce.lacunas.GeradorDeNome;
 import com.hcs.incomex.Usuario;
-import com.hcs.incomex.generators.GeradorDeData;
-import com.hcs.incomex.generators.GeradorDeLogin;
-import com.hcs.incomex.generators.GeradorDeSenha;
+import com.hcs.incomex.lacunas.GeradorDeData;
+import com.hcs.incomex.lacunas.GeradorDeLogin;
+import com.hcs.incomex.lacunas.GeradorDeSenha;
 import java.util.Random;
+
 
 /**
  *
  * @author helton
  */
-public class ConstrutorUsuario {
+public class PovoadorUsuario {
        
     public static Usuario getUsuario() {
         String nome = GeradorDeNome.prox();
@@ -28,12 +29,11 @@ public class ConstrutorUsuario {
     }  
         
 }
-
 class TesteConstrutorUsuario {
     
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            System.out.println(ConstrutorUsuario.getUsuario());
+            System.out.println(PovoadorUsuario.getUsuario());
             System.out.println("==============================================");
         }
     }    

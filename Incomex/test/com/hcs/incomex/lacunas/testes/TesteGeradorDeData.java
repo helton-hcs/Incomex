@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hcs.incomex.tests;
+package com.hcs.incomex.lacunas.testes;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author helton
  */
-public class TesteUsuario {
+public class TesteGeradorDeData {
     
-    public TesteUsuario() {
+    public TesteGeradorDeData() {
     }
     
     @BeforeClass

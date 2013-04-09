@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hcs.incomex.generators;
+package com.hcs.incomex.lacunas;
 
 import java.util.Arrays;
 import java.util.Calendar;

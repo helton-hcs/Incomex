@@ -15,13 +15,8 @@ import java.util.Random;
  */
 public class GeradorData {
     
-    private static int anoInicial;
-    private static int anoFinal;    
-    
-    public GeradorData() {
-        anoFinal   = getAnoAtual();
-        anoInicial = getAnoAtual() - 100;         
-    }
+    private static int anoInicial = getAnoAtual() - 100;
+    private static int anoFinal   = getAnoAtual();    
    
     public GeradorData(int anoInicial) {
         this(anoInicial, getAnoAtual());
@@ -33,8 +28,7 @@ public class GeradorData {
     }
     
     private static int getAnoAtual() {
-        GregorianCalendar date = new GregorianCalendar();        
-        return date.get(Calendar.YEAR);        
+        return new GregorianCalendar().get(Calendar.YEAR);        
     }       
     
     private static int geraAno() { 
@@ -61,12 +55,7 @@ public class GeradorData {
         int dia = geraDia(mes, ano);
         return new GregorianCalendar(ano, mes, dia);
     }    
-    
-    static {
-        anoFinal   = getAnoAtual();
-        anoInicial = getAnoAtual() - 100;           
-    }
-
+ 
 }
 
 class TesteGeradorData {

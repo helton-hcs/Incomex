@@ -23,7 +23,7 @@ public class ConstrutorUsuario {
                 GeradorLogin.getLogin(),
                 GeradorSenha.getSenha(),                 
                 new GeradorData(2005).getData(), 
-                new Random().nextDouble() * 10000.00);
+                Math.round((new Random().nextDouble() * 10000.00)));
     }  
         
 }

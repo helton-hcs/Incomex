@@ -11,11 +11,11 @@ import java.util.GregorianCalendar;
  *
  * @author helton
  */
-public class Receita extends Conta {
+public class Receita extends Item {
     
     private Status status;
     private GregorianCalendar dataRecebimento;
-    private ArrayList<ContaParcial> recebimentosParciais;
+    private ArrayList<ItemParcial> recebimentosParciais;
     private double valorRecebido;
     
     private enum Status {

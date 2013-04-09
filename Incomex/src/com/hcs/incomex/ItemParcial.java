@@ -11,9 +11,10 @@ import java.util.GregorianCalendar;
  * @author helton
  */
 
-public class ContaParcial {
+public class ItemParcial {
     
     private GregorianCalendar data;
     private double valor;
     private String observacao;
+    
 }

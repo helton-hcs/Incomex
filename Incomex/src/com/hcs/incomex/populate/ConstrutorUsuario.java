@@ -6,9 +6,9 @@ package com.hcs.incomex.populate;
 
 import br.unesp.igce.lacunas.GeradorDeNome;
 import com.hcs.incomex.Usuario;
-import com.hcs.incomex.generators.GeradorData;
-import com.hcs.incomex.generators.GeradorLogin;
-import com.hcs.incomex.generators.GeradorSenha;
+import com.hcs.incomex.generators.GeradorDeData;
+import com.hcs.incomex.generators.GeradorDeLogin;
+import com.hcs.incomex.generators.GeradorDeSenha;
 import java.util.Random;
 
 /**
@@ -18,11 +18,12 @@ import java.util.Random;
 public class ConstrutorUsuario {
        
     public static Usuario getUsuario() {
-        return new Usuario(GeradorDeNome.prox(), 
-                new GeradorData(1950, 1995).getData(), 
-                GeradorLogin.getLogin(),
-                GeradorSenha.getSenha(),                 
-                new GeradorData(2005).getData(), 
+        String nome = GeradorDeNome.prox();
+        return new Usuario(nome, 
+                new GeradorDeData(1950, 1995).getData(), 
+                GeradorDeLogin.getLogin(nome),
+                GeradorDeSenha.getSenha(),                 
+                new GeradorDeData(2005).getData(), 
                 Math.round((new Random().nextDouble() * 10000.00)));
     }  
         

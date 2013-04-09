@@ -8,6 +8,6 @@ package com.hcs.incomex;
  *
  * @author helton
  */
-public class Investimento extends Conta {
+public class Investimento extends Item {
     
 }

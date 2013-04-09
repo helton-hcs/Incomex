@@ -9,22 +9,23 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Random;
 
+
 /**
  *
  * @author helton
  */
-public class GeradorData {
+public class GeradorDeData {
     
     private static int anoInicial = getAnoAtual() - 100;
     private static int anoFinal   = getAnoAtual();    
    
-    public GeradorData(int anoInicial) {
+    public GeradorDeData(int anoInicial) {
         this(anoInicial, getAnoAtual());
     }              
     
-    public GeradorData(int anoInicial, int anoFinal) {
-        GeradorData.anoInicial = anoInicial;
-        GeradorData.anoFinal   = anoFinal;
+    public GeradorDeData(int anoInicial, int anoFinal) {
+        GeradorDeData.anoInicial = anoInicial;
+        GeradorDeData.anoFinal   = anoFinal;
     }
     
     private static int getAnoAtual() {
@@ -57,12 +58,11 @@ public class GeradorData {
     }    
  
 }
-
 class TesteGeradorData {
     
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            GregorianCalendar data = new GeradorData(1950, 1995).getData();
+            GregorianCalendar data = new GeradorDeData(1950, 1995).getData();
             System.out.println(data.getTime());
         }
     }    

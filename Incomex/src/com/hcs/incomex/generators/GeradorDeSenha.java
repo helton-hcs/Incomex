@@ -6,11 +6,12 @@ package com.hcs.incomex.generators;
 
 import java.util.Random;
 
+
 /**
  *
  * @author helton
  */
-public class GeradorSenha {
+public class GeradorDeSenha {
     
     public enum TipoSenha {
         apenasLetras,
@@ -41,7 +42,7 @@ public class GeradorSenha {
             //97-122 -> a-z
             case apenasLetras: 
                 for (int i = 0; i < tamanho; i++) {                    
-                    if (r.nextInt() <= .5) {             
+                    if (r.nextDouble() <= .5) {             
                         senha += getValorAscii(65, 90);  //letras maiúsculas [A-Z]: 65-90
                     }
                     else {                                
@@ -56,10 +57,10 @@ public class GeradorSenha {
                 break;
             case alfanumerica:
                 for (int i = 0; i < tamanho; i++) {                    
-                    if (r.nextInt() <= .33) {             
+                    if (r.nextDouble() <= .33) {             
                         senha += getValorAscii(65, 90);  //letras maiúsculas [A-Z]: 65-90
                     }
-                    else if (r.nextInt() <= .33 * 2) {        
+                    else if (r.nextDouble() <= .33 * 2) {        
                         senha += getValorAscii(97, 122); //letras minúsculas [a-z]: 97-127                       
                     }
                     else {                                 
@@ -69,25 +70,25 @@ public class GeradorSenha {
                 break;
             case comCaracteresEspeciais:
                 for (int i = 0; i < tamanho; i++) {                    
-                    if (r.nextInt() <= .25 * 1) {             
+                    if (r.nextDouble() <= .25 * 1) {             
                         senha += getValorAscii(65, 90);  //letras maiúsculas [A-Z]: 65-90
                     }
-                    else if (r.nextInt() <= .25 * 2) {    
+                    else if (r.nextDouble() <= .25 * 2) {    
                         senha += getValorAscii(97, 122); //letras minúsculas [a-z]: 97-127
                     }
-                    else if (r.nextInt() <= .25 * 3) {            
+                    else if (r.nextDouble() <= .25 * 3) {            
                         senha += getValorAscii(48, 57);  //números [0-9]                                
                     }
-                    else if (r.nextInt() <= (.25 * 3) + (.25/4)) {
+                    else if (r.nextDouble() <= (.25 * 3) + (.25/4)) {
                         senha += getValorAscii(33, 47);    //caracteres especiais - grupo1 [33-47]                                
                     }
-                    else if (r.nextInt() <= (.25 * 3) + (.25/3)){
+                    else if (r.nextDouble() <= (.25 * 3) + (.25/3)){
                         senha += getValorAscii(58, 64);    //caracteres especiais - grupo2 [58-64]                                                       
                     }                    
-                    else if (r.nextInt() <= (.25 * 3) + (.25/2)){
+                    else if (r.nextDouble() <= (.25 * 3) + (.25/2)){
                         senha += getValorAscii(94, 96);    //caracteres especiais - grupo3 [94-96]                             
                     }
-                    else if (r.nextInt() <= (.25 * 3) + (.25/1)){
+                    else if (r.nextDouble() <= (.25 * 3) + (.25/1)){
                         senha += getValorAscii(123, 126);  //caracteres especiais - grupo4 [123-126]                             
                     }
                 }                  
@@ -102,7 +103,7 @@ class TesteGeradorSenha {
     
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            System.out.println("Senha: " + GeradorSenha.getSenha());
+            System.out.println("Senha: " + GeradorDeSenha.getSenha());
         }                
     }    
     

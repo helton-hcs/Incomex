@@ -20,7 +20,7 @@ public class Usuario {
     private double salario;
 
     public Usuario(String nome, GregorianCalendar dataNascimento, String login, 
-            String senha, GregorianCalendar dataUltimoLogin, double salario) {
+                   String senha, GregorianCalendar dataUltimoLogin, double salario) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.login = login;

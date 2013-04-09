@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
  *
  * @author helton
  */
-public class Conta {
+public class Item {
 
     private int Id;
     private Usuario usuario;

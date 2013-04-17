@@ -4,6 +4,8 @@
  */
 package com.hcs.incomex.lacunas.testes;
 
+import com.hcs.incomex.lacunas.GeradorDeData;
+import java.util.GregorianCalendar;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,27 +19,14 @@ import static org.junit.Assert.*;
  */
 public class TesteGeradorDeData {
     
-    public TesteGeradorDeData() {
+    @Test
+    public void TesteDataComValorInicial() {
+        assertTrue(new GeradorDeData(1950).getData().compareTo(new GregorianCalendar(1950, 01, 01))>=0);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
+    @Test
+    public void TesteDataComIntervalos() {
+        assertTrue(new GeradorDeData(1950,2013).getData().compareTo(new GregorianCalendar(2013, 12, 31))<=0);        
     }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

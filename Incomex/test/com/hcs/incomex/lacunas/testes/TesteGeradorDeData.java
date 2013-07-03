@@ -4,12 +4,8 @@
  */
 package com.hcs.incomex.lacunas.testes;
 
-import com.hcs.incomex.geradores.GeradorDeData;
+import com.hcs.incomex.lacunas.GeradorDeData;
 import java.util.GregorianCalendar;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
